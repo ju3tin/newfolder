@@ -8,13 +8,13 @@ main = Blueprint('main', __name__)
 
 @main.route('/')
 def index():
-    questions = Question.query.filter(Question.answer != None).all()
+    #questions = Question.query.filter(Question.answer != None).all()
 
-    context = {
-        'questions' : questions
-    }
-
-    return render_template('home.html', **context)
+    #context = {
+   #    'questions' : questions
+   # }
+    return render_template('base1.html')
+    #return render_template('home.html', **context)
 
 @main.route('/ask', methods=['GET', 'POST'])
 @login_required
